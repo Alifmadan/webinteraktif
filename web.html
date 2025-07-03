@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halo Interaktif</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      font-size: 18px;
+      padding: 10px;
+      margin: 10px;
+    }
+    #hasil {
+      margin-top: 20px;
+      font-size: 24px;
+      color: teal;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SELAMAT DATANG</h1>
+
+  <input type="text" id="namaInput" placeholder="Masukkan nama kamu" />
+  <button id="tombolSapa">Sapa Saya</button>
+
+  <div id="hasil"></div>
+
+  <script>
+    const tombol = document.getElementById("tombolSapa");
+    const input = document.getElementById("namaInput");
+    const hasil = document.getElementById("hasil");
+
+    tombol.addEventListener("click", function() {
+      const nama = input.value.trim();
+      if (nama) {
+        hasil.textContent = Halo, ${nama}! Senang bertemu denganmu 😊;
+      } else {
+        hasil.textContent = "Silakan masukkan namamu dulu ya!";
+      }
+    });
+  </script>
+
+</body>
+</html>
